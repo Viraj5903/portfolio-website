@@ -73,7 +73,7 @@ const Navbar: React.FC = (): JSX.Element => {
                 <div className="max-w-screen-xl flex items-center justify-between py-[1rem] px-0 mx-auto my-0">
 
                     {/* Logo for the navbar */}
-                    <Link href="/" className="text-4xl font-bold h-auto w-48 max-xsm:w-40">Viraj</Link>
+                    <Link href="/" className="text-4xl font-bold">Viraj</Link>
 
                     <ul className="flex items-center text-center gap-2 list-none max-lg:hidden">
                         {navBarItems()} {/* Render the navigation items for larger screens */}

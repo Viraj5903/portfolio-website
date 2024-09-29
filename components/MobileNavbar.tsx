@@ -9,6 +9,7 @@ import Link from "next/link";
  * @param {boolean} props.isOpen - Indicates if the mobile menu is currently open.
  * @param {() => void} props.toggleMenu - Function to toggle the menu visibility.
  * @param {() => JSX.Element[]} props.navBarItems - Function that returns an array of JSX elements for the navbar items.
+ * 
  * @returns {React.JSX.Element} The rendered MobileNavbar component.
  */
 const MobileNavbar: React.FC<{ isOpen: boolean; toggleMenu: () => void; navBarItems: () => JSX.Element[]; }> =
@@ -23,7 +24,9 @@ const MobileNavbar: React.FC<{ isOpen: boolean; toggleMenu: () => void; navBarIt
                 {/* Container for the menu items */}
                 < div className="mobile-menu-container w-[60vw] h-screen bg-[#342864] p-8 overflow-auto" >
                     {/* Title of the mobile navbar */}
-                    < Link className="mb-10 text-3xl font-bold" href="/" > Viraj</Link >
+                    <h1 className="mb-10 text-3xl font-bold">
+                        <Link href="/">Viraj</Link>
+                    </h1>
 
                     {/* List of navigation items */}
                     < ul className="flex flex-col gap-8 list-none" >
