@@ -1,4 +1,6 @@
 import About from "@/components/About"; // Importing the About component to display personal information
+import ContactMe from "@/components/ContactMe"; // Importing the ContactMe component for user contact options
+import Footer from "@/components/Footer"; // Importing the Footer component for the bottom of the page
 import HomeSection from "@/components/HomeSection"; // Importing the HomeSection component as the landing section
 import Navbar from "@/components/Navbar"; // Importing the Navbar component for site navigation
 import Projects from "@/components/Projects"; // Importing the Projects component to showcase work
@@ -23,7 +25,9 @@ export default function Home(): JSX.Element {
         <Skills /> {/* Rendering the skills section */}
         <WorkExperience /> {/* Rendering the work experience section */}
         <Projects /> {/* Rendering the projects section */}
+        <ContactMe /> {/* Rendering the contact me section */}
       </main>
+      <Footer /> {/* Rendering the footer at the bottom of the page */}
     </div>
   );
 }

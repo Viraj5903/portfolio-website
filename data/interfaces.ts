@@ -102,3 +102,24 @@ export interface Project {
      */
     github: string;
 }
+
+/**
+ * @interface ContactFormData
+ * Represents the structure of the data submitted through a contact form.
+ */
+export interface ContactFormData {
+    /**
+     * The name of the person submitting the form.
+     */
+    name: string;
+
+    /**
+     * The email address of the person submitting the form.
+     */
+    email: string;
+
+    /**
+     * The message or content provided by the person submitting the form.
+     */
+    message: string;
+}
