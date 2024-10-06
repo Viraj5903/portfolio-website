@@ -1,4 +1,4 @@
-import { NavLink, SkillSection, WorkExperience } from "./interfaces";
+import { NavLink, Project, SkillSection, WorkExperience } from "./interfaces";
 
 /**
  * An array of navigation links for the application.
@@ -132,3 +132,78 @@ export const WorkExperiences: readonly WorkExperience[] = [
         ]
     }, */
 ] as const; // Ensures the array is read-only, providing better type safety.
+
+/**
+ * An array of project information, each containing details such as title, short description, overview,
+ * technologies used, and a GitHub link.
+ * 
+ * @type {readonly Project[]} 
+ * 
+ * @constant ProjectsInfo
+ */
+export const ProjectsInfo: readonly Project[] = [
+    {
+        id: 'portfolio',
+        title: 'Portfolio Website',
+        shortDescription: 'A personal site showcasing my skills and projects, built with Next.js, Tailwind and MongoDB.',
+        overview: 'A personal website showcasing my skills, experience, and projects. Built with Next.js, Tailwind, and MongoDB.',
+        technologies: ['Next.js', 'Tailwind', 'TypeScript', 'MongoDB', 'Git', 'GitHub', 'Visual Studio Code'],
+        github: 'https://github.com/Viraj5903/portfolio-website'
+    },
+    {
+        id: 'cosmochat',
+        title: 'CosmoChat UI',
+        shortDescription: 'Frontend application for engaging with an AI chatbot, featuring natural interaction and session management.',
+        overview: `CosmoChat UI is the frontend application that enables users to engage in chat sessions with an AI chatbot powered by OpenAI's language model. The primary objective is to offer a seamless platform for users to interact with the chatbot, ask questions, and receive responses naturally. It incorporates features such as activity tracking, session ending, and session management.`,
+        technologies: ['React.js', 'JavaScript', 'Material UI', 'OpenAI API', 'Git', 'GitHub', 'Visual Studio Code'],
+        github: 'https://github.com/Viraj5903/CosmoChatUI'
+    },
+    {
+        id: 'quantumbot',
+        title: 'QuantumBot Core',
+        shortDescription: 'Backend for real-time communication using Firebase, enabling CRUD operations in Firestore.',
+        overview: `QuantumBot Core contains the backend logic for handling real-time communication and collaboration among individuals and teams. It uses Firebase Cloud Functions to provide the necessary API endpoints to support the core functionalities of QuantumBot Core, including CRUD (Create, Read, Update, Delete) operations in Firestore. These operations allow users to interact with the Firestore database to add, retrieve, update, and delete messages.`,
+        technologies: ['Node.js', 'JavaScript', 'Firebase', 'Git', 'GitHub', 'Visual Studio Code'],
+        github: 'https://github.com/Viraj5903/QuantumBot-Mission'
+    },
+    {
+        id: 'professor-course-assignment-platform',
+        title: 'Professor Course Assignment Platform',
+        shortDescription: 'Java system for managing professor-course assignments, optimizing based on seniority.',
+        overview: `The Professor Course Assignment Platform (PCAP) is a Java-based system designed to efficiently manage and match professors to courses within the Computer Science Department at LaSalle College. The platform features advanced data structures, including a priority queue, to optimize professor assignments based on seniority and requested hours, while also handling course and professor representations.`,
+        technologies: ['Java', 'Git', 'GitHub', 'IntelliJ IDEA'],
+        github: 'https://github.com/Viraj5903/Professor_Course_Assignment_Platform'
+    },
+    {
+        id: 'taskops-api',
+        title: 'TaskOps API',
+        shortDescription: 'RESTful backend API for task management, featuring secure user authentication and CRUD operations.',
+        overview: `TaskOps API, built using Python, is a Flask and MongoDB based RESTful backend API that simplifies task management with secure and efficient user registration, authentication, and CRUD operations for tasks using JWT authentication tokens.`,
+        technologies: ['Python', 'Flask', 'JSON Web Token (JWT)', 'MongoDB', 'Git', 'GitHub', 'Visual Studio Code'],
+        github: 'https://github.com/Viraj5903/TaskOps-API'
+    },
+    {
+        id: 'user-access-management-system',
+        title: 'User Access Management System',
+        shortDescription: 'Full-stack PHP app for managing users and permissions with secure authentication.',
+        overview: `A full-stack PHP application for managing users, user groups, and permissions, built with MySQL and Apache. Features a responsive front-end (HTML, CSS, Bootstrap, JS, jQuery) and secure authentication. Includes CRUD operations for users, groups, and permissions, with API endpoints for backend integration.`,
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery', 'PHP', 'MySQL', 'Git', 'GitHub', 'PHPStorm'],
+        github: 'https://github.com/Viraj5903/420DW3_07278_Project'
+    },
+    {
+        id: 'mood-food',
+        title: 'Mood Food Project',
+        shortDescription: 'C# Windows Forms app tracking food intake and mood, offering personalized food recommendations.',
+        overview: `The Mood Food Project is a Windows Forms application in C# for tracking food intake and mood, providing personalized food recommendations based on mood patterns. It features secure authentication and comprehensive mood tracking.`,
+        technologies: ['C#', 'Windows Forms', 'Git', 'GitHub', 'Visual Studio'],
+        github: 'https://github.com/Viraj5903/Mood_Food_Project'
+    },
+    {
+        id: 'insurance-simulation',
+        title: 'Insurance Simulation Software',
+        shortDescription: 'C++ console app simulating insurance operations, including claims management and finances.',
+        overview: `Insurance Simulation Software is a C++ console app that models insurance company operations. Users manage insurance agreements, track finances, handle claims, and interact through a menu system. Developed in Visual Studio with C++, it offers a realistic insurance simulation.`,
+        technologies: ['C++', 'Git', 'GitHub', 'Visual Studio'],
+        github: 'https://github.com/Viraj5903/Insurance_Simulation_Software'
+    }
+] as const;

@@ -1,6 +1,7 @@
 import About from "@/components/About"; // Importing the About component to display personal information
 import HomeSection from "@/components/HomeSection"; // Importing the HomeSection component as the landing section
 import Navbar from "@/components/Navbar"; // Importing the Navbar component for site navigation
+import Projects from "@/components/Projects"; // Importing the Projects component to showcase work
 import Skills from "@/components/Skills"; // Importing the Skills component to display technical skills
 import WorkExperience from "@/components/WorkExperience"; // Importing the WorkExperience component to detail job history
 
@@ -21,6 +22,7 @@ export default function Home(): JSX.Element {
         <About /> {/* Rendering the about section */}
         <Skills /> {/* Rendering the skills section */}
         <WorkExperience /> {/* Rendering the work experience section */}
+        <Projects /> {/* Rendering the projects section */}
       </main>
     </div>
   );

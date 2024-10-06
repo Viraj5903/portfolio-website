@@ -66,3 +66,39 @@ export interface WorkExperience {
      */
     responsibilities: string[];
 }
+
+/**
+ * @interface Project
+ * Represents a project with various details.
+ */
+export interface Project {
+    /**
+     * A unique identifier for the project.
+     */
+    id: string;
+
+    /**
+     * The title of the project.
+     */
+    title: string;
+
+    /**
+     * A brief description of the project.
+     */
+    shortDescription: string;
+
+    /**
+     * A detailed overview of the project.
+     */
+    overview: string;
+
+    /**
+     * An array of technologies used in the project.
+     */
+    technologies: string[];
+
+    /**
+     * The URL to the project's GitHub repository.
+     */
+    github: string;
+}
