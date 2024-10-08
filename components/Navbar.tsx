@@ -1,11 +1,11 @@
 "use client"
 
-import { navLinks } from "@/data/data"; // Importing navigation links from a data file
-import { useState } from "react"; // Importing useState hook from React for managing component state
-import MobileNavbar from "./MobileNavbar"; // Importing the MobileNavbar component for mobile navigation
-import { motion } from "framer-motion"; // Importing motion for animation effects
-import Link from "next/link"; // Import the Link component from Next.js for client-side navigation
-import WeatherInfo from "./WeatherInfo"; // Importing the WeatherInfo component to display weather information
+import { navLinks } from "@/data/data";
+import { useState } from "react";
+import MobileNavbar from "./MobileNavbar";
+import { motion } from "framer-motion";
+import Link from "next/link"; // Importing the Link component from Next.js for client-side navigation
+import WeatherInfo from "./WeatherInfo";
 
 /**
  * Navbar component renders a navigation bar.
@@ -32,7 +32,7 @@ const Navbar: React.FC = (): JSX.Element => {
             // Check if the current navLink is not "Contact Me"
             if (navLink.name !== "Contact Me") {
                 return (
-                    <li key={navLink.href} className={`${!openMenu ? 'my-0 mx-6' : ''}`}>
+                    <li key={navLink.href} className={`${!openMenu ? 'my-0 mx-4' : ''}`}>
                         <Link
                             href={navLink.href} // Link for navigation
                             className="flex text-lg font-medium text-white relative cursor-pointer 
@@ -74,9 +74,9 @@ const Navbar: React.FC = (): JSX.Element => {
                 <div className="max-w-screen-xl flex items-center justify-between py-[1rem] px-0 mx-auto my-0">
 
                     {/* Logo for the navbar */}
-                    <Link href="/" className="text-4xl font-bold">Viraj</Link>
+                    <Link href="/" className="text-4xl font-bold max-sm:text-2xl">Viraj</Link>
 
-                    <div className="flex items-center justify-between gap-8">
+                    <div className="flex items-center justify-between gap-6">
                         {/* List of navigation items for larger screens */}
                         <ul className="flex items-center text-center gap-2 list-none max-lg:hidden">
                             {navBarItems()} {/* Render the navigation items for larger screens */}

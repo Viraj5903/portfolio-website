@@ -1,6 +1,7 @@
 "use client"
 
 import { useInView, motion } from "framer-motion"; // Importing hooks from Framer Motion for animations
+import Image from "next/image";
 import { useRef } from "react";
 
 /**
@@ -22,18 +23,21 @@ const HomeSection: React.FC = (): JSX.Element => {
         <motion.section
             id="#home"
             ref={ref} // Attach the ref to the section for visibility detection
-            className="min-h-screen flex flex-col justify-center items-center"
+            className="min-h-screen flex flex-col justify-center items-center pt-28"
             initial={{ opacity: 0 }} // Initial state: fully transparent and scaled down
             animate={{ opacity: isInView ? 1 : 0 }} // Animate based on visibility
             transition={{ duration: 2 }} // Duration of the animation (2 seconds)
         >
-            <div>
+            <div className="flex flex-col justify-center items-center gap-2 text-center">
+
+                <Image src="/images/Viraj-Patel-Avatar.jpg" alt="Avatar" width={200} height={200} className="rounded-full w-[200px] h-auto max-xsm:w-[150px]" />
+
                 <div className="flex flex-col text-center">
-                    <h2 className="text-5xl font-bold p-6">Hello, I am Viraj Patel</h2>
-                    <p className="text-3xl p-3">Software Developer | Web Developer</p>
+                    <h2 className="text-5xl font-bold p-6 max-md:text-3xl">Hello, I am <span className="text-nowrap">Viraj Patel</span></h2>
+                    <p className="text-3xl p-3 max-md:text-xl">Software Developer | Web Developer</p>
                 </div>
 
-                <div className="my-5 flex flex-row justify-center items-center">
+                <div className="my-5 flex flex-row justify-center items-center max-md:text-base">
                     <a
                         href="/Viraj-Patel-Resume.pdf"
                         download// Link to download the resume
@@ -46,6 +50,6 @@ const HomeSection: React.FC = (): JSX.Element => {
             </div>
         </motion.section>
     );
-};
+}
 
 export default HomeSection;
