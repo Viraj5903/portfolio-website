@@ -1,10 +1,11 @@
 "use client"
 
-import { navLinks } from "@/data/data";
-import { useState } from "react";
-import MobileNavbar from "./MobileNavbar";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { navLinks } from "@/data/data"; // Importing navigation links from a data file
+import { useState } from "react"; // Importing useState hook from React for managing component state
+import MobileNavbar from "./MobileNavbar"; // Importing the MobileNavbar component for mobile navigation
+import { motion } from "framer-motion"; // Importing motion for animation effects
+import Link from "next/link"; // Import the Link component from Next.js for client-side navigation
+import WeatherInfo from "./WeatherInfo"; // Importing the WeatherInfo component to display weather information
 
 /**
  * Navbar component renders a navigation bar.
@@ -64,7 +65,7 @@ const Navbar: React.FC = (): JSX.Element => {
             {/* Render the MobileNavbar component for mobile navigation */}
             <MobileNavbar isOpen={openMenu} toggleMenu={toggleMenu} navBarItems={navBarItems} />
 
-            {/* Main navigation bar that appears on larger screens */}
+            {/* Main navigation bar */}
             <motion.nav
                 initial={{ translateY: - 100, opacity: 0 }}
                 animate={{ translateY: 0, opacity: 1 }}
@@ -75,18 +76,24 @@ const Navbar: React.FC = (): JSX.Element => {
                     {/* Logo for the navbar */}
                     <Link href="/" className="text-4xl font-bold">Viraj</Link>
 
-                    <ul className="flex items-center text-center gap-2 list-none max-lg:hidden">
-                        {navBarItems()} {/* Render the navigation items for larger screens */}
-                    </ul>
+                    <div className="flex items-center justify-between gap-8">
+                        {/* List of navigation items for larger screens */}
+                        <ul className="flex items-center text-center gap-2 list-none max-lg:hidden">
+                            {navBarItems()} {/* Render the navigation items for larger screens */}
+                        </ul>
 
-                    {/* Menu Button for mobile view */}
-                    <button className="text-2xl w-10 h-10 items-center justify-center border-none rounded-md text-white bg-gradient-to-r from-[#A993FE] to-[#7E61E7] leading-[0] cursor-pointer transition-all duration-400 ease-linear hidden
-                    hover:text-[#A993FE] hover:bg-[#000] hover:from-transparent hover:to-transparent hover:border hover:border-solid border-[#A993FE] max-lg:flex" onClick={toggleMenu}>
-                        {/* Button that shows a menu icon when the menu is closed and a close icon when the menu is open */}
-                        <span className="material-symbols-outlined text-[1.8rem]">
-                            {openMenu ? "close" : "menu"} {/* Change icon based on menu state */}
-                        </span>
-                    </button>
+                        {/* Display the current weather information in the navbar */}
+                        <WeatherInfo />
+
+                        {/* Menu Button for mobile view */}
+                        <button className="text-2xl w-10 h-10 items-center justify-center border-none rounded-md text-white bg-gradient-to-r from-[#A993FE] to-[#7E61E7] leading-[0] cursor-pointer transition-all duration-400 ease-linear hidden
+                        hover:text-[#A993FE] hover:bg-[#000] hover:from-transparent hover:to-transparent hover:border hover:border-solid border-[#A993FE] max-lg:flex" onClick={toggleMenu}>
+                            {/* Button that shows a menu icon when the menu is closed and a close icon when the menu is open */}
+                            <span className="material-symbols-outlined text-[1.8rem]">
+                                {openMenu ? "close" : "menu"} {/* Change icon based on menu state */}
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </motion.nav>
         </div>

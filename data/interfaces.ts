@@ -123,3 +123,75 @@ export interface ContactFormData {
      */
     message: string;
 }
+
+/**
+ * @interface WeatherData
+ * Represents the structure of weather data returned from the OpenWeather API.
+ */
+export interface WeatherData {
+    /**
+     * An array of weather conditions.
+     * Each condition contains an id, main description, detailed description, and an icon URL.
+     */
+    weather: Array<{
+        /**
+         * Unique identifier for the weather condition
+         */
+        id: number;
+
+        /**
+         * Short description of the weather condition (e.g., "Rain")
+         */
+        main: string;
+        
+        /**
+         * Detailed description of the weather condition (e.g., "light rain")
+         */
+        description: string;
+        
+        /**
+         * URL for the weather icon
+         */ 
+        icon: string;
+    }>;
+
+    /**
+     * Contains main weather details.
+     */
+    main: {
+        /**
+         * The current temperature in degrees Celsius.
+         */
+        temp: number;
+
+        /**
+         * The perceived temperature, accounting for humidity and wind chill.
+         */
+        feels_like: number;
+
+        /**
+         * The minimum temperature at the given location.
+         */
+        temp_min: number;
+
+        /**
+         * The maximum temperature at the given location.
+         */
+        temp_max: number;
+
+        /**
+         * Atmospheric pressure in hPa.
+         */
+        pressure: number;
+
+        /**
+         * Humidity percentage.
+         */
+        humidity: number;
+    };
+
+    /**
+     * The name of the city for which the weather data is provided.
+     */
+    name: string;
+}

@@ -78,7 +78,7 @@ const Projects = (): JSX.Element => {
                 </div>
             )
             }
-        </AnimatedSection >
+        </AnimatedSection>
     );
 };
 

@@ -146,7 +146,7 @@ export const ProjectsInfo: readonly Project[] = [
         id: 'portfolio',
         title: 'Portfolio Website',
         shortDescription: 'A personal site showcasing my skills and projects, built with Next.js, Tailwind and MongoDB.',
-        overview: 'A personal website showcasing my skills, experience, and projects. Built with Next.js, Tailwind, and MongoDB.',
+        overview: `The Portfolio Website is a personal site designed to showcase skills, experience, and projects, featuring a responsive layout that encompasses sections for Navigation, Home, About, Skills, Work Experience, Projects, Contact Me, and a Footer, ensuring a user-friendly experience that effectively highlights technical capabilities. Built using Next.js with TypeScript, Tailwind CSS, and MongoDB, the application leverages Next.js's powerful framework and utilizes TypeScript for enhanced type safety and developer experience. The site includes API endpoints that efficiently retrieve project data from a MongoDB database, with each project having a dedicated page utilizing Next.js dynamic routes to fetch detailed information by project ID, allowing for comprehensive project views. Additionally, a sendForm URL with a POST method facilitates seamless form submissions through the contact form. Integration of the OpenWeather API provides real-time weather updates based on the user's location, defaulting to Montreal when the location is unavailable.`,
         technologies: ['Next.js', 'Tailwind', 'TypeScript', 'MongoDB', 'Git', 'GitHub', 'Visual Studio Code'],
         github: 'https://github.com/Viraj5903/portfolio-website'
     },
